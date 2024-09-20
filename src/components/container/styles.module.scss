@@ -1,0 +1,11 @@
+$container-max-width: 1280px;
+$padding-base: 4px;
+
+.container {
+  max-width: $container-max-width;   
+  margin-left: auto;                 
+  margin-right: auto;                
+  padding-left: $padding-base * 3;   
+  padding-right: $padding-base * 3; 
+
+}

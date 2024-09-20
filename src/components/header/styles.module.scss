@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+@font-face {
+    font-family: 'Logotype';
+    src: url('/fonts/Logotype.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+.header {
+    display: flex;             
+    align-items: center;
+    justify-content: space-between;       
+    height: auto;
+    width: 100%;   
+    margin-bottom: 20px;
+      
+    
+    h1{
+        font-family: 'Inter', sans-serif;
+        font-size: 24px;
+        margin: 0; 
+        font-weight: bold;
+
+    }
+
+    h2{
+        color: #0000008A;
+        font-size: 19px;
+        font-weight: normal;
+        margin-right: 3vw;
+    }
+
+
+  }
+  
+ 
+  .logo {
+    width: 150px;              
+    height: auto;
+    opacity: 1;
+    position: relative;  
+    top: 1.5px;      
+    padding: 0 2vw;   
+  }
+  
+  .borderLine {
+    height: 1px;                           
+    background-color: #D7DDE9;             
+    width: calc(100% - 80px);            
+    margin: 0 auto;                        
+    position: relative;
+    top: -5px;                            
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .date {
+        margin-right: 0; 
+    }
+
+    .borderLine {
+        width: 95%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome {
+        font-size: 20px !important;
+        padding-left: 50px;
+        margin-top: 10px !important;
+        font-weight: lighter !important;
+    }
+
+    .date {
+        font-size: 18px !important;
+        padding-left: 50px;
+        margin-top: 10px !important;
+        font-weight: lighter !important;
+    }
+}

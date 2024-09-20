@@ -1,0 +1,108 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #FFFFFFCC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: white;
+  border-radius: 8px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  padding: 50px 50px;
+}
+
+.modal h1 {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 24px;
+  margin-bottom: 40px;
+  margin-top: -20px;
+  font-weight: bold;
+}
+
+.modal h2 {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: lighter;
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+}
+
+.cancelButton {
+  background-color: #E7EEFB;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 190px;
+  height: 50px;
+  font-size: 20px;
+
+  &:hover {
+    background-color: #e0e0e0;
+  }
+}
+
+.addTaskButton {
+  background-color: #53C0F0;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  width: 190px;
+  height: 50px;
+  font-size: 20px;
+
+  &:hover {
+    background-color: #0796D3;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .modal {
+    width: 100vw;
+    height: 100vh;
+    padding: 20px;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .modal h1{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 24px;
+    margin-top: -350px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .modalButtons {
+    flex-direction: column;
+    gap: 10px; 
+  }
+
+  .cancelButton,
+  .addTaskButton {
+    width: 100%;
+  }
+}
