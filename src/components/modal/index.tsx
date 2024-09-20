@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./styles.module.scss";
 
 interface ModalProps {
@@ -9,7 +9,21 @@ interface ModalProps {
   children: React.ReactNode;
 }
 
-export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, onAdd, children }) => {
+export const Modal: React.FC<ModalProps> = ({
+  isOpen,
+  onClose,
+  title,
+  onAdd,
+  children,
+}) => {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   return (
@@ -18,7 +32,7 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, onAdd, chi
         <h1>{title}</h1>
         {children}
         <div className={styles.modalButtons}>
-        {onAdd && (
+          {onAdd && (
             <button className={styles.addTaskButton} onClick={onAdd}>
               Adicionar
             </button>
@@ -26,7 +40,6 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, onAdd, chi
           <button className={styles.cancelButton} onClick={onClose}>
             Cancelar
           </button>
-          
         </div>
       </div>
     </div>
